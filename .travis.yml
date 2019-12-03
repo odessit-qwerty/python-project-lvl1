@@ -1,0 +1,5 @@
+launguage: python
+python: 3.6
+
+script: 
+  - make lint
