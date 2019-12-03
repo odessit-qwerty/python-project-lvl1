@@ -1,2 +1,2 @@
-# python-project-lvl11
-# https://travis-ci.com/odessit-qwerty/python-project-lvl1
+# Brain Games
+https://travis-ci.com/odessit-qwerty/python-project-lvl1.svg?branch=master
