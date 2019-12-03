@@ -1,5 +1,11 @@
-launguage: python
-python: 3.6
+language: python
+python:
+  - "3.6"
+  - "3.7"
 
-script: 
+install:
+  - pip install poetry
+  - pip install flake8
+
+script:
   - make lint
