@@ -1,10 +1,7 @@
 [tool.poetry]
 name = "odessitqwerty_brain_games"
-<<<<<<< HEAD
 version = "0.1.5"
-=======
-version = "0.1.2"
->>>>>>> b095c7454fff1ab4e7a35ae75ac70820cd8b220a
+
 description = ""
 authors = ["Leonid <shapirov.l@2gis.com.ua>"]
 packages = [
@@ -21,10 +18,8 @@ flake8 = "^3.7"
 [tool.poetry.scripts]
 brain-games = 'brain_games.scripts.brain_games:main'
 brain-even = 'brain_games.scripts.brain_even:main'
-<<<<<<< HEAD
 brain-calc = 'brain_games.scripts.brain_calc:main'
-=======
->>>>>>> b095c7454fff1ab4e7a35ae75ac70820cd8b220a
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
