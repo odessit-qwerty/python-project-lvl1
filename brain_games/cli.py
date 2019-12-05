@@ -12,7 +12,7 @@ def get_user_name():
 
 
 def get_user_answer():
-    return prompt.string("Your answer: ")
+    return str(prompt.string("Your answer: "))
 
 
 def show_valid_answer(user_answer, answer, user_name):

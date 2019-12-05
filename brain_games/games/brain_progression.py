@@ -5,19 +5,19 @@ from random import randint
 
 def make_progression():
     progression_length = 10
-    progression_step = randint(1, 10)
-    first_number = randint(1, 10)
+    step = randint(1, 10)
+    progression_first_number = randint(1, 10)
     hidden_element_index = randint(0, progression_length - 1)
     question = ''
     counter = 0
     while counter < progression_length:
-        next_in_progression = first_number + counter * progression_step
+        next_in_progression = progression_first_number + counter * step
         if counter == hidden_element_index:
             correct_answer = next_in_progression
-            question = ('{}.. '.format(question))
+            question = ('{}..'.format(question))
             counter = counter + 1
         else:
-            question = ('{}{} '.format(question, next_in_progression))
+            question = ('{}{}'.format(question, next_in_progression))
             counter = counter + 1
     return question, str(correct_answer)
 

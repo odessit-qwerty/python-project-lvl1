@@ -1,21 +1,31 @@
 from brain_games import cli, engine
 from brain_games.cli import ATTEMPT, TO_WIN
-from math import gcd
+
+
+def check_prime_number(number):
+    if number <= 1:
+        return False
+    for value in range(2, int(number ** 0.5) + 1):
+        if (number % value) == 0:
+            return False
+    return True
 
 
 def main():
     print("""
 Welcome to the Brain Games!
-Find the greatest common divisor of given numbers.\n""")
+Answer "yes" if given number is prime. Otherwise answer "no".\n""")
     user_name = cli.get_user_name()
     attempt = ATTEMPT
     to_win = TO_WIN
     while attempt > 0:
-        number_first = engine.get_random_number()
-        number_second = engine.get_random_number()
-        answer = str(gcd(number_first, number_second))
+        number_prime = engine.get_random_number()
+        if check_prime_number(number_prime) is False:
+            answer = 'no'
+        else:
+            answer = 'yes'
+        print("Questions: {}".format(number_prime))
         user_answer = cli.get_user_answer()
-        print("Question: {} {}".format(number_first, number_second))
         if answer == user_answer:
             print("Correct!\n")
             to_win += 1
