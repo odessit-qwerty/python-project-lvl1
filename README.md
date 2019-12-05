@@ -3,7 +3,7 @@
 =======
 
 brain-even
-[![asciicast](https://asciinema.org/a/m82Szlz0snMXC5cxBsLRWcFIv.svg)](https://asciinema.org/a/m82Szlz0snMXC5cxBsLRWcFIv)
+[![asciicast](https://asciinema.org/a/VknISnKPStp6ETjn7iWsvBz0J.svg)](https://asciinema.org/a/VknISnKPStp6ETjn7iWsvBz0J)
 
-brain-gcd
-[![asciicast](https://asciinema.org/a/g6mZthhHQOoHWQGXbj8Pl9ST3.svg)](https://asciinema.org/a/g6mZthhHQOoHWQGXbj8Pl9ST3)
+brain-calc
+[![asciicast](https://asciinema.org/a/YwEdePrwMRjp52fezJvHRnB6g.svg)](https://asciinema.org/a/YwEdePrwMRjp52fezJvHRnB6g)
