@@ -23,7 +23,3 @@ Let's try again {}!\n""".format(user_answer, answer, user_name))
 def check_win(user_name):
     print("Congratulations, {}!".format(user_name))
     return False
-
-
-if __name__ == "__main__":
-    welcome()
