@@ -1,6 +1,5 @@
-from brain_games import cli
-from brain_games.cli import ATTEMPT, TO_WIN
-from random import randint
+from brain_games import cli, engine
+from brain_games.engine import ATTEMPT, TO_WIN
 
 
 def get_correct_answer(num_first, num_second, operation):
@@ -21,8 +20,8 @@ What is the result of the expression?\n""")
     to_win = TO_WIN
     operation_list = ['+', '-', '*']
     while attempt > 0:
-        num_first = randint(0, 101)
-        num_second = randint(0, 101)
+        num_first = engine.get_random_number()
+        num_second = engine.get_random_number()
         operation = operation_list[randint(0, len(operation_list) - 1)]
         answer = get_correct_answer(num_first, num_second, operation)
         print("Question: {} {} {}".format(num_first, operation, num_second))
@@ -32,7 +31,7 @@ What is the result of the expression?\n""")
             to_win += 1
             attempt -= 1
         else:
-            cli.valid_answer(user_answer, answer, user_name)
+            cli.show_valid_answer(user_answer, answer, user_name)
             attempt -= 1
         if to_win == 3:
             cli.check_win(user_name)

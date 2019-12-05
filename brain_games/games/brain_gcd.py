@@ -1,25 +1,20 @@
 from brain_games import cli, engine
-from brain_games.engine import ATTEMPT, TO_WIN
-
-
-def get_correct_answer(questions):
-    if questions % 2 == 0:
-        return 'yes'
-    else:
-        return 'no'
+from brain_games.cli import ATTEMPT, TO_WIN
+from math import gcd
 
 
 def main():
     print("""
 Welcome to the Brain Games!
-Answer "yes" if number even otherwise answer "no"\n""")
+Find the greatest common divisor of given numbers.\n""")
     user_name = cli.get_user_name()
     attempt = ATTEMPT
     to_win = TO_WIN
     while attempt > 0:
-        questions = engine.get_random_number()
-        answer = get_correct_answer(questions)
-        print("Question: {}".format(questions))
+        number_first = engine.get_random_number()
+        number_second = engine.get_random_number()
+        answer = str(gcd(number_first, number_second))
+        print("Question: {} {}".format(number_first, number_second))
         user_answer = cli.get_user_answer()
         if answer == user_answer:
             print("Correct!\n")
@@ -30,7 +25,3 @@ Answer "yes" if number even otherwise answer "no"\n""")
             attempt -= 1
         if to_win == 3:
             cli.print_win(user_name)
-
-
-if __name__ == "__main__":
-    main()

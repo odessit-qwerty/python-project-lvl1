@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import prompt
+from random import randint
 
 ATTEMPT = 3
 TO_WIN = 0
@@ -15,11 +16,11 @@ def get_user_answer():
     return prompt.string("Your answer: ")
 
 
-def valid_answer(user_answer, answer, user_name):
+def show_valid_answer(user_answer, answer, user_name):
     print(""""{}" is wrong answer ;(. Correct answer was "{}".
 Let's try again {}!\n""".format(user_answer, answer, user_name))
 
 
-def check_win(user_name):
+def print_win(user_name):
     print("Congratulations, {}!".format(user_name))
     return False
