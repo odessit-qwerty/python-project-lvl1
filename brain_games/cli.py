@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import prompt
-from random import randint
 
 ATTEMPT = 3
 TO_WIN = 0
