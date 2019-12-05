@@ -1,5 +1,6 @@
 from brain_games import cli, engine
 from brain_games.engine import ATTEMPT, TO_WIN
+from random import randint
 
 
 def get_correct_answer(num_first, num_second, operation):
