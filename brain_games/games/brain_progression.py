@@ -1,16 +1,17 @@
-from brain_games import cli, engine
+from brain_games import cli
 from brain_games.engine import ATTEMPT, TO_WIN
 from random import randint
+
 
 def make_progression():
     progression_length = 10
     progression_step = randint(1, 10)
-    progression_first_number = randint(1, 10)
+    first_number = randint(1, 10)
     hidden_element_index = randint(0, progression_length - 1)
     question = ''
     counter = 0
     while counter < progression_length:
-        next_in_progression = progression_first_number + counter * progression_step
+        next_in_progression = first_number + counter * progression_step
         if counter == hidden_element_index:
             correct_answer = next_in_progression
             question = ('{}.. '.format(question))
@@ -19,7 +20,7 @@ def make_progression():
             question = ('{}{} '.format(question, next_in_progression))
             counter = counter + 1
     return question, str(correct_answer)
-        
+
 
 def main():
     print("""
@@ -41,4 +42,3 @@ What number is missing in the progression?\n""")
             attempt -= 1
         if to_win == 3:
             cli.print_win(user_name)
-        
