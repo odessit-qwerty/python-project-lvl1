@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 import prompt
 
-ATTEMPT = 3
-TO_WIN = 0
-
 
 def get_user_name():
     name = prompt.string("May I have your name? ")
